@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+*{
+    font-family: 'Sora', sans-serif;
+    overflow-y: hidden;
+    
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(135deg, red, black) ;
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#merci{
+    text-shadow: 3px 3px black;
+}
+
+img {
+    height: 45%;
+}

@@ -1,0 +1,418 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+
+
+body::-webkit-scrollbar { /* on modifie la barre entière  */
+    width: 12px; /* on la rendre plus large */
+    
+  }
+  
+  body::-webkit-scrollbar-track { /*on modifie le fond de la barre */
+    background: rgba(0, 0, 0, 0.73); /* on lui donne une couleur */
+    
+  }
+  
+  body::-webkit-scrollbar-thumb { /* on modifie la partie centrale de la barre */
+    background: linear-gradient(135deg, red, black); /* on lui donne une couleur */
+    border-radius: 15px; /* on lui arrondi les bords */
+    border: 3px solid white; /* on lui donne une bordure */
+  }
+
+
+
+/*Css index + général*/
+:root {
+    --title: rgb(247, 0, 0);
+    --lien: rgb(228, 231, 9);
+    --primary: rgba(255, 255, 255, 0.933); /*mise en place des variables*/
+}
+
+.navbar #logo {
+    width: 100px;
+}
+
+#navbarcontact{
+    font-family: Sora, "sans-serif"; /* mise en place de la police importée plus tot */
+}
+.bodysite {
+    font-family: Sora, "sans-serif";
+    overflow-x: hidden; /* permet de rogner le contenu dépassant l'écran et donc par conséquence d'enlever la barre de scroll horizontale*/
+    background-color: black;
+    
+}
+
+h1,h2,h3,h4,h5,h6,
+.display-4 { /*taille des titres*/
+    color: var(--title);
+    font-weight: 700;
+    font-family: Sora, "sans-serif";
+}
+
+a {
+    color: white;
+    
+}
+
+a:hover{
+    color: var(--lien); /* déclaration d'une variable*/
+     
+    
+}
+
+p{
+    color: white;
+}
+
+
+.hero {
+    background-image:  url(../imgs/hero_header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: -2; /*définit la "couche" où l'élement et ce qui en découle sont positionés*/
+}
+
+.hero::after { /*crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné.*/
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0,0, 0, 0.7);
+    z-index: -1;
+
+}
+
+.site{ 
+    padding-top: 120px; /*marge*/
+    padding-bottom: 120px;
+    
+}
+
+#indexgauche{
+    padding-left: 50px;
+    
+}
+
+#indexdroit{
+    padding-left: 25px;
+}
+
+.excelsior{
+    height: 400px;
+    border-radius: 15px 15px 15px 15px; /*permet d'arrondir les arretes d'un élément*/
+        
+}
+
+/*footer*/
+.footer-top {
+    padding-bottom: 90px;
+    padding: 90px;
+    font-family: Sora,"sans-serif";
+    background-color:rgb(44, 44, 44);
+}
+
+.footer-top a {
+    color: white
+}
+
+.footer-top a:hover {
+    color: var(--lien);
+}
+
+#logo {
+    width: 100px;
+}
+
+.liens{
+    color: white;
+}
+/*fin footer*/
+
+/*Css contact*/
+#backgroundcontact{
+    font-family: Sora, "sans-serif";
+    background-color: black;
+}
+
+
+/*Css heros et vilains  */
+
+#pblanc{
+    color: white;
+    padding-left: 20px;
+   
+}
+
+
+#intro3
+{
+    
+    width: 300px;
+    height: 400px;
+    position:relative;
+    padding-left: 17px;
+    padding-bottom: 10px;
+    border-radius: 20px 20px 20px 20px;
+
+}
+
+#vilainstexte {
+    padding-left: 20px;
+    padding-bottom: 20px;
+
+}
+
+#titrevilain{
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+#vilainstexte {
+    padding-left: 20px;
+    padding-bottom: 20px;
+
+}
+
+#titrevilain{
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+
+/*comics*/
+
+#comics{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*indique au navigateur de prendre en compte la bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
+    
+}
+
+#titrecomics{
+    justify-content: center; /*éléments groupés au centre*/
+    text-align: center;
+    padding-bottom: 150px;
+}
+
+.container2{
+    min-height: 100vh; /*relatif à la hauteur du bloc conteneur initial*/
+    width: 100%;
+    display: flex; /*définit le type d'affichage utilisée pour le rendu d'un élément*/
+    align-items: center ;
+    justify-content: center;  
+}
+
+.timeline{
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline ul{
+    list-style: none; /*pas de points*/
+}
+
+.timeline ul li{
+    padding: 20px;
+    background-color: rgb(44, 42, 42);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#nom{
+    color: white;
+}
+
+.timeline ul li:last-child{ /*permet de cibler un élément qui est le dernier enfant de son parent.*/
+  margin-bottom: 0;
+}
+
+.timeline-content h1{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.timeline-content p{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+
+}
+.timeline-content .date{
+    font-size: 13px;
+    font-weight: 300;
+    color: yellow;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+
+@media only screen and (min-width: 768px){ /*permettent de modifier l'apparence d'un site ou d'une application en fonction du type d'appareil*/
+    .timeline::before{ /*créer un pseudo-élément qui sera le premier enfant de l'élément ciblé*/
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        left: 52%;
+        transform: translateX(-50%); /*permet d'appliquer une transition en 2D */ 
+        background-color: grey;
+    }
+    .timeline ul li{
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    .timeline ul li:nth-child(odd){ /*impaire*/
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 20px 0px 20px 20px;
+    }
+
+    .timeline ul li:nth-child(even){/*paire*/
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 20px 20px 20px;
+    }
+    .timeline ul li::after{ /*crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné.*/
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: grey;
+        border-radius: 50%;
+        top: 0;
+    }
+    .timeline ul li:nth-child(odd)::after{
+        transform: translate(50%, -50%);
+        right: -30px;
+    }
+
+    .timeline ul li:nth-child(even)::after{
+        transform: translate(-50%, -50%);
+        left: -30px;
+    }
+    .timeline ul li:hover::after{
+        background-color: yellow;
+    }
+    .timeline-content .date{
+        position: absolute;
+        top: -20px;
+    }
+
+    .imgtimeline {
+        padding-bottom: 10px;
+        padding-top: 8px;
+        border-radius: 10%;
+       
+
+}
+}
+
+.imgtimeline {
+    padding-bottom: 10px;
+    padding-top: 15px;
+    border-radius: 10%;
+}
+
+.imgtimeline2{
+    height: 450px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    border-radius: 10%;
+}
+
+/*Iron Man */
+
+#titreironman{
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+#imageironman{
+    height: 450px;
+    justify-content: center;
+    border-radius: 0%,0%,10%,10%;
+}
+
+#titrehistoiregenie{
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-bottom: 18px;
+}
+
+#textehistoiregenie{
+    padding-left: 20px;
+    padding-bottom: 18px;
+    margin-right: 50px;
+    text-align: justify;
+    
+}
+
+#armor1{
+    height: 350px;
+    border-radius: 0%,0%,10%,10%;
+    margin-left: 20px;
+    margin-top: 40px;
+    
+
+}
+
+#pouvoirsironman{
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-bottom: 18px;
+    margin-right: 50px;
+}
+
+#capacite{
+    color: yellow;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+#textecapacite{
+    padding-left: 20px;
+    padding-bottom: 18px;
+    margin-right: 50px;
+    text-align: justify;
+    
+    
+}
+
+#armure{
+    color: aqua;
+    text-decoration: underline;
+    margin-left: 20px;
+   
+}
+
+
+
+#btnheros{
+    margin-right: 50px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+/*Css connexion admin*/
+
+.login-box{
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
